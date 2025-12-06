@@ -1,0 +1,34 @@
+name: Prowlarr YAML plugins
+author: kingbri
+sources:
+  - name: Prowlarr
+    version: 4
+    minVersion: "0.7"
+    about: >-
+      A self hosted indexer manager for searching media
+    website: https://prowlarr.com
+    dynamicWebsite: true
+    tags:
+      - name: Self Hosted
+    api:
+      clientSecret:
+        dynamic: true
+    jsonParser:
+      searchUrl: >-
+        /api/v1/search?query={query}&indexerIds=-1&type=search
+      results: $
+      magnetHash:
+        query: infoHash
+      magnetLink:
+        query: magnetUrl
+      subName:
+        query: indexer
+      title:
+        query: title
+      size:
+        query: size
+      sl:
+        seeders:
+          query: seeders
+        leechers:
+          query: peers
