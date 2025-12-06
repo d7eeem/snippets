@@ -3,7 +3,7 @@ author: kingbri
 sources:
   - name: Prowlarr
     version: 4
-    minVersion: "0.7"
+    minVersion: '0.7'
     about: >-
       A self hosted indexer manager for searching media
     website: https://prowlarr.com
@@ -14,8 +14,7 @@ sources:
       clientSecret:
         dynamic: true
     jsonParser:
-      searchUrl: >-
-        /api/v1/search?query={query}&indexerIds=-1&type=search
+      searchUrl: /api/v1/search?query={query}&indexerIds=-1&type=search
       results: $
       magnetHash:
         query: infoHash
@@ -28,7 +27,5 @@ sources:
       size:
         query: size
       sl:
-        seeders:
-          query: seeders
-        leechers:
-          query: peers
+        seeders: seeders
+        leechers: peers
