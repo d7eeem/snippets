@@ -13,8 +13,10 @@ sources:
     api:
       clientSecret:
         dynamic: true
+        header: X-Api-Key
     jsonParser:
       searchUrl: /api/v1/search?query={query}&indexerIds=-1&type=search
+      method: GET
       results: $
       magnetHash:
         query: infoHash
@@ -28,4 +30,4 @@ sources:
         query: size
       sl:
         seeders: seeders
-        leechers: peers
+        leechers: leechers
