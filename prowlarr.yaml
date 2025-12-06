@@ -26,6 +26,10 @@ sources:
         query: title
       size:
         query: size
+      publishDate:
+        query: publishDate
+      downloadUrl:
+        query: downloadUrl
       sl:
         seeders: seeders
         leechers: leechers
