@@ -3,7 +3,7 @@ author: kingbri
 sources:
   - name: Prowlarr
     version: 4
-    minVersion: "0.7"
+    minVersion: '0.7'
     about: >-
       A self hosted indexer manager for searching media
     website: https://prowlarr.com
@@ -13,7 +13,6 @@ sources:
     api:
       clientSecret:
         dynamic: true
-        header: X-Api-Key
     jsonParser:
       searchUrl: /api/v1/search?query={query}&indexerIds=-1&type=search&apikey={secret}
       results: $
